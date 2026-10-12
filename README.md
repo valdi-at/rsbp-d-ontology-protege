@@ -76,14 +76,14 @@ ORDER BY ?name
 
 Output:
 
-| ?person       | ?name         |
-| ------------- | ------------- |
-| company:Budi  | Budi Santoso  |
-| company:Citra | Citra Lestari |
-| company:Dian  | Dian Pratama  |
-| company:Eko   | Eko Nugroho   |
-| company:Joko  | Joko Susilo   |
-| company:Rina  | Rina Wijaya   |
+| `?person`       | `?name`         |
+| --------------- | --------------- |
+| `company:Budi`  | `Budi Santoso`  |
+| `company:Citra` | `Citra Lestari` |
+| `company:Dian`  | `Dian Pratama`  |
+| `company:Eko`   | `Eko Nugroho`   |
+| `company:Joko`  | `Joko Susilo`   |
+| `company:Rina`  | `Rina Wijaya`   |
 
 ### Complex 2 (OPTIONAL): every project with its owning department (if any)
 
@@ -103,12 +103,12 @@ ORDER BY ?project
 
 Output:
 
-| ?project              | ?status   | ?department       |
-| --------------------- | --------- | ----------------- |
-| company:BrandCampaign | completed | company:Marketing |
-| company:BudgetSystem  | active    | company:Finance   |
-| company:InternalWiki  | planned   |                   |
-| company:WebsitePortal | active    | company:IT        |
+| ?project                | ?status     | ?department         |
+| ----------------------- | ----------- | ------------------- |
+| `company:BrandCampaign` | `completed` | `company:Marketing` |
+| `company:BudgetSystem`  | `active`    | `company:Finance`   |
+| `company:InternalWiki`  | `planned`   |                     |
+| `company:WebsitePortal` | `active`    | `company:IT`        |
 
 ### Complex 3 (JOIN + FILTER): employees hired after 2021 with a skill, working on an active project
 
@@ -129,11 +129,11 @@ WHERE {
 ORDER BY ?hired
 ```
 
-| ?name          | ?hired               | ?skill             | ?project              |
-| -------------- | -------------------- | ------------------ | --------------------- |
-| Gita Anggraini | 2022-08-01^^xsd:date | company:Accounting | company:BudgetSystem  |
-| Fajar Hidayat  | 2023-05-08^^xsd:date | company:Rust       | company:WebsitePortal |
-| Joko Susilo    | 2025-07-01^^xsd:date | company:Python     | company:WebsitePortal |
+| ?name            | ?hired                 | ?skill               | ?project                |
+| ---------------- | ---------------------- | -------------------- | ----------------------- |
+| `Gita Anggraini` | `2022-08-01^^xsd:date` | `company:Accounting` | `company:BudgetSystem`  |
+| `Fajar Hidayat`  | `2023-05-08^^xsd:date` | `company:Rust`       | `company:WebsitePortal` |
+| `Joko Susilo`    | `2025-07-01^^xsd:date` | `company:Python`     | `company:WebsitePortal` |
 
 ### Complex 4 (GROUP BY + COUNT + HAVING): headcount and average salary per department
 
@@ -153,9 +153,9 @@ ORDER BY DESC(?headcount)
 
 Output:
 
-| ?department       | ?headcount | ?avgSalary |
-| ----------------- | ---------- | ---------- |
-| company:IT        | 4          | 4200       |
-| company:Finance   | 2          | 4900       |
-| company:Marketing | 2          | 4600       |
-| company:HR        | 2          | 6250       |
+| ?department         | ?headcount | ?avgSalary |
+| ------------------- | ---------- | ---------- |
+| `company:IT`        | `4`        | `4200`     |
+| `company:Finance`   | `2`        | `4900`     |
+| `company:Marketing` | `2`        | `4600`     |
+| `company:HR`        | `2`        | `6250`     |
