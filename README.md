@@ -12,6 +12,76 @@
 
 ![OrtoGraph](./img/20261012_090936.png)
 
+## Ontology Structure
+
+### Classes
+
+| Class           | Parent / Definition                                                    |
+| --------------- | ---------------------------------------------------------------------- |
+| `Person`        | -                                                                      |
+| `Employee`      | `subClassOf Person`, `worksIn some Department`                         |
+| `Manager`       | `subClassOf Employee`, `manages some Employee`, disjoint with `Intern` |
+| `Intern`        | `subClassOf Employee`, disjoint with `Manager`                         |
+| `Department`    | -                                                                      |
+| `Office`        | -                                                                      |
+| `Project`       | -                                                                      |
+| `Skill`         | -                                                                      |
+| `ProjectMember` | `equivalentClass Person ⊓ (assignedTo some Project)`                   |
+
+`Department`, `Office`, `Person`, `Project`, and `Skill` are declared pairwise disjoint (`AllDisjointClasses`).
+
+### Object Properties
+
+| Property     | Domain       | Range        | Characteristics                  |
+| ------------ | ------------ | ------------ | -------------------------------- |
+| `assignedTo` | `Employee`   | `Project`    | -                                |
+| `hasSkill`   | `Employee`   | `Skill`      | -                                |
+| `locatedIn`  | `Department` | `Office`     | -                                |
+| `manages`    | `Manager`    | `Employee`   | inverse of `reportsTo`           |
+| `ownedBy`    | `Project`    | `Department` | functional                       |
+| `reportsTo`  | `Employee`   | `Manager`    | transitive, inverse of `manages` |
+| `worksIn`    | `Employee`   | `Department` | functional                       |
+
+### Data Properties
+
+| Property      | Domain     | Range         | Characteristics |
+| ------------- | ---------- | ------------- | --------------- |
+| `hasBudget`   | `Project`  | `xsd:integer` | functional      |
+| `hasEmail`    | `Person`   | `xsd:string`  | -               |
+| `hasFullName` | `Person`   | `xsd:string`  | functional      |
+| `hasHireDate` | `Employee` | `xsd:date`    | functional      |
+| `hasSalary`   | `Employee` | `xsd:integer` | functional      |
+| `hasStatus`   | `Project`  | `xsd:string`  | functional      |
+
+### Individuals
+
+| Individual      | Type         |
+| --------------- | ------------ |
+| `Accounting`    | `Skill`      |
+| `BandungOffice` | `Office`     |
+| `BrandCampaign` | `Project`    |
+| `BudgetSystem`  | `Project`    |
+| `Budi`          | `Manager`    |
+| `Citra`         | `Manager`    |
+| `Design`        | `Skill`      |
+| `Dian`          | `Manager`    |
+| `Eko`           | `Manager`    |
+| `Fajar`         | `Employee`   |
+| `Finance`       | `Department` |
+| `Gita`          | `Employee`   |
+| `HR`            | `Department` |
+| `Hadi`          | `Employee`   |
+| `IT`            | `Department` |
+| `Indah`         | `Employee`   |
+| `InternalWiki`  | `Project`    |
+| `JakartaHQ`     | `Office`     |
+| `Joko`          | `Intern`     |
+| `Marketing`     | `Department` |
+| `Python`        | `Skill`      |
+| `Rina`          | `Manager`    |
+| `Rust`          | `Skill`      |
+| `WebsitePortal` | `Project`    |
+
 ## SPARQL Queries
 
 ### Simple 1: employees who work in IT
