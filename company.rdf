@@ -5,7 +5,8 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:company="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company"/>
     
 
@@ -283,6 +284,299 @@
     <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Skill"/>
     
 
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Accounting -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Accounting">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BandungOffice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BandungOffice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Office"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BrandCampaign -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BrandCampaign">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Project"/>
+        <company:ownedBy rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Marketing"/>
+        <company:hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</company:hasBudget>
+        <company:hasStatus>completed</company:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BudgetSystem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BudgetSystem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Project"/>
+        <company:ownedBy rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Finance"/>
+        <company:hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</company:hasBudget>
+        <company:hasStatus>active</company:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Budi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Budi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#WebsitePortal"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Python"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rina"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#IT"/>
+        <company:hasEmail>budi@company.com</company:hasEmail>
+        <company:hasFullName>Budi Santoso</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-15</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6500</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Citra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Citra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BudgetSystem"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Accounting"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rina"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Finance"/>
+        <company:hasEmail>citra@company.com</company:hasEmail>
+        <company:hasFullName>Citra Lestari</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-01</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6200</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Design -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Design">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Dian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Dian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BrandCampaign"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Design"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rina"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Marketing"/>
+        <company:hasEmail>dian@company.com</company:hasEmail>
+        <company:hasFullName>Dian Pratama</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-10</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5800</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Eko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Eko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#WebsitePortal"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Python"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rust"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Budi"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#IT"/>
+        <company:hasEmail>eko@company.com</company:hasEmail>
+        <company:hasFullName>Eko Nugroho</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-02-20</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Fajar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Fajar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#WebsitePortal"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rust"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Eko"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#IT"/>
+        <company:hasEmail>fajar@company.com</company:hasEmail>
+        <company:hasFullName>Fajar Hidayat</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-08</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3800</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Finance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Finance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Department"/>
+        <company:locatedIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#JakartaHQ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Gita -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Gita">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BudgetSystem"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Accounting"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Citra"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Finance"/>
+        <company:hasEmail>gita@company.com</company:hasEmail>
+        <company:hasFullName>Gita Anggraini</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-08-01</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3600</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#HR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#HR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Department"/>
+        <company:locatedIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#JakartaHQ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Hadi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Hadi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BrandCampaign"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Design"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Dian"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Marketing"/>
+        <company:hasEmail>hadi@company.com</company:hasEmail>
+        <company:hasFullName>Hadi Kusuma</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-18</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3400</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#IT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#IT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Department"/>
+        <company:locatedIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#BandungOffice"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Indah -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Indah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rina"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#HR"/>
+        <company:hasEmail>indah@company.com</company:hasEmail>
+        <company:hasFullName>Indah Permata</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-02</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#InternalWiki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#InternalWiki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Project"/>
+        <company:hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</company:hasBudget>
+        <company:hasStatus>planned</company:hasStatus>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#JakartaHQ -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#JakartaHQ">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Office"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Joko -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Joko">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Intern"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#WebsitePortal"/>
+        <company:hasSkill rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Python"/>
+        <company:reportsTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Eko"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#IT"/>
+        <company:hasEmail>joko@company.com</company:hasEmail>
+        <company:hasFullName>Joko Susilo</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-07-01</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1500</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Marketing -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Marketing">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Department"/>
+        <company:locatedIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#JakartaHQ"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Python -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Python">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rina -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rina">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager"/>
+        <company:assignedTo rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#InternalWiki"/>
+        <company:worksIn rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#HR"/>
+        <company:hasEmail>rina@company.com</company:hasEmail>
+        <company:hasFullName>Rina Wijaya</company:hasFullName>
+        <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-01</company:hasHireDate>
+        <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9000</company:hasSalary>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rust -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Rust">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Skill"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#WebsitePortal -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#WebsitePortal">
+        <rdf:type rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Project"/>
+        <company:ownedBy rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#IT"/>
+        <company:hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</company:hasBudget>
+        <company:hasStatus>active</company:hasStatus>
+    </owl:NamedIndividual>
+    
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
