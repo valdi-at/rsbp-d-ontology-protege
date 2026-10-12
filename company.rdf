@@ -8,10 +8,10 @@
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:company="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Datatypes
@@ -19,16 +19,16 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.w3.org/2001/XMLSchema#date -->
 
     <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#date"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -36,7 +36,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#assignedTo -->
@@ -49,6 +49,16 @@
 
 
 
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasEquipment -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasEquipment">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Employee"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
+    </owl:ObjectProperty>
+
+
+
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasSkill -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasSkill">
@@ -56,7 +66,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Employee"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Skill"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#locatedIn -->
@@ -66,7 +76,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Office"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#manages -->
@@ -77,7 +87,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Manager"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Employee"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#ownedBy -->
@@ -88,7 +98,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Project"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department"/>
     </owl:ObjectProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#reportsTo -->
@@ -102,6 +112,16 @@
 
 
 
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#storedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#storedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Office"/>
+    </owl:ObjectProperty>
+
+
+
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#worksIn -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#worksIn">
@@ -110,10 +130,10 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Employee"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department"/>
     </owl:ObjectProperty>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -121,6 +141,17 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasAssetTag -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasAssetTag">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
 
 
 
@@ -132,7 +163,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Project"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasEmail -->
@@ -142,7 +173,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasFullName -->
@@ -153,7 +184,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Person"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasHireDate -->
@@ -167,6 +198,17 @@
 
 
 
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasPurchaseDate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasPurchaseDate">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </owl:DatatypeProperty>
+
+
+
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasSalary -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasSalary">
@@ -175,7 +217,7 @@
         <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Employee"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </owl:DatatypeProperty>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasStatus -->
@@ -189,6 +231,17 @@
 
 
 
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasValue -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#hasValue">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+
+
+
     <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -197,12 +250,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department"/>
+
+
+
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
 
 
 
@@ -217,7 +276,7 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Intern -->
@@ -226,7 +285,7 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Employee"/>
         <owl:disjointWith rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Manager"/>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Manager -->
@@ -240,25 +299,25 @@
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Office -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Office"/>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Person -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Person"/>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Project -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Project"/>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#ProjectMember -->
@@ -276,16 +335,16 @@
             </owl:Class>
         </owl:equivalentClass>
     </owl:Class>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Skill -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Skill"/>
+    
 
 
-
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -293,6 +352,7 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Accounting -->
@@ -300,7 +360,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Accounting">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Skill"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#BandungOffice -->
@@ -308,7 +368,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#BandungOffice">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Office"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#BrandCampaign -->
@@ -319,7 +379,7 @@
         <company:hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20000</company:hasBudget>
         <company:hasStatus>completed</company:hasStatus>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#BudgetSystem -->
@@ -330,7 +390,7 @@
         <company:hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30000</company:hasBudget>
         <company:hasStatus>active</company:hasStatus>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Budi -->
@@ -338,6 +398,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Budi">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Manager"/>
         <company:assignedTo rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#WebsitePortal"/>
+        <company:hasEquipment rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Laptop001"/>
         <company:hasSkill rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Python"/>
         <company:reportsTo rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Rina"/>
         <company:worksIn rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#IT"/>
@@ -346,7 +407,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-06-15</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6500</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Citra -->
@@ -362,7 +423,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-09-01</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6200</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Design -->
@@ -370,7 +431,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Design">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Skill"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Dian -->
@@ -386,7 +447,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-01-10</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5800</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Eko -->
@@ -394,6 +455,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Eko">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Manager"/>
         <company:assignedTo rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#WebsitePortal"/>
+        <company:hasEquipment rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Laptop002"/>
         <company:hasSkill rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Python"/>
         <company:hasSkill rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Rust"/>
         <company:reportsTo rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Budi"/>
@@ -403,7 +465,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-02-20</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Fajar -->
@@ -419,7 +481,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-05-08</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3800</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Finance -->
@@ -428,7 +490,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department"/>
         <company:locatedIn rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#JakartaHQ"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Gita -->
@@ -444,7 +506,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-08-01</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3600</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#HR -->
@@ -453,7 +515,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department"/>
         <company:locatedIn rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#JakartaHQ"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Hadi -->
@@ -469,7 +531,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-18</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3400</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#IT -->
@@ -478,13 +540,14 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department"/>
         <company:locatedIn rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#BandungOffice"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Indah -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Indah">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Employee"/>
+        <company:hasEquipment rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#OfficeChair001"/>
         <company:reportsTo rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Rina"/>
         <company:worksIn rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#HR"/>
         <company:hasEmail>indah@company.com</company:hasEmail>
@@ -492,7 +555,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-11-02</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3500</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#InternalWiki -->
@@ -502,7 +565,7 @@
         <company:hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5000</company:hasBudget>
         <company:hasStatus>planned</company:hasStatus>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#JakartaHQ -->
@@ -510,7 +573,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#JakartaHQ">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Office"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Joko -->
@@ -529,6 +592,30 @@
 
 
 
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Laptop001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Laptop001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
+        <company:storedIn rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#BandungOffice"/>
+        <company:hasAssetTag>AST-001</company:hasAssetTag>
+        <company:hasPurchaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2022-01-10</company:hasPurchaseDate>
+        <company:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</company:hasValue>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Laptop002 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Laptop002">
+        <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
+        <company:storedIn rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#BandungOffice"/>
+        <company:hasAssetTag>AST-002</company:hasAssetTag>
+        <company:hasPurchaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-03-15</company:hasPurchaseDate>
+        <company:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1100</company:hasValue>
+    </owl:NamedIndividual>
+
+
+
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Marketing -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Marketing">
@@ -538,12 +625,24 @@
 
 
 
+    <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#OfficeChair001 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#OfficeChair001">
+        <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
+        <company:storedIn rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#JakartaHQ"/>
+        <company:hasAssetTag>AST-003</company:hasAssetTag>
+        <company:hasPurchaseDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2021-07-01</company:hasPurchaseDate>
+        <company:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</company:hasValue>
+    </owl:NamedIndividual>
+
+
+
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Python -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Python">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Skill"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Rina -->
@@ -557,7 +656,7 @@
         <company:hasHireDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-01</company:hasHireDate>
         <company:hasSalary rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9000</company:hasSalary>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Rust -->
@@ -565,7 +664,7 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Rust">
         <rdf:type rdf:resource="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Skill"/>
     </owl:NamedIndividual>
-
+    
 
 
     <!-- http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#WebsitePortal -->
@@ -576,9 +675,10 @@
         <company:hasBudget rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50000</company:hasBudget>
         <company:hasStatus>active</company:hasStatus>
     </owl:NamedIndividual>
+    
 
 
-    <!--
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // General axioms
@@ -590,6 +690,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
         <owl:members rdf:parseType="Collection">
             <rdf:Description rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Department"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Equipment"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Office"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Person"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#Project"/>
@@ -601,3 +702,4 @@
 
 
 <!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
