@@ -5,7 +5,7 @@
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX company:  <http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#>
+PREFIX company:  <http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#>
 
 SELECT ?employee
 WHERE {
@@ -18,7 +18,7 @@ WHERE {
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX company:  <http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#>
+PREFIX company:  <http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#>
 
 SELECT ?project ?budget
 WHERE {
@@ -32,7 +32,7 @@ WHERE {
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX company:  <http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#>
+PREFIX company:  <http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#>
 
 SELECT ?person ?name
 WHERE {
@@ -49,7 +49,7 @@ ORDER BY ?name
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX company:  <http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#>
+PREFIX company:  <http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#>
 
 SELECT DISTINCT ?project ?status ?department
 WHERE {
@@ -65,7 +65,7 @@ ORDER BY ?project
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX company:  <http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#>
+PREFIX company:  <http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#>
 
 SELECT ?name ?hired ?skill ?project
 WHERE {
@@ -84,7 +84,7 @@ ORDER BY ?hired
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX company:  <http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#>
+PREFIX company:  <http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#>
 
 SELECT ?department (COUNT(?e) AS ?headcount) (AVG(?salary) AS ?avgSalary)
 WHERE {
@@ -101,7 +101,7 @@ ORDER BY DESC(?headcount)
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX company:  <http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#>
+PREFIX company:  <http://www.semanticweb.org/air-es-bepek/ontologies/2026/9/company#>
 
 SELECT ?name
 WHERE {
