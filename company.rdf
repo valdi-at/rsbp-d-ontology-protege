@@ -209,6 +209,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Person"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#worksIn"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Department"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -226,6 +232,12 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#manages"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
     </owl:Class>
     
 
@@ -251,7 +263,17 @@
     <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#ProjectMember -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#ProjectMember">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Person"/>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Person"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#assignedTo"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Project"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
     </owl:Class>
     
 
