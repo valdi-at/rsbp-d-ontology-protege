@@ -4,11 +4,11 @@
 | ------------ |
 | Air Es Bepek |
 
-| NRP        |
-| ---------- |
-| 5025221238 |
-| 5025231233 |
-| 5025231286 |
+| Name                          | NRP        |
+| ----------------------------- | ---------- |
+| Mohamad Valdi Ananda Tauhid   | 5025221238 |
+| Muhammad Farrel Fathin Wibowo | 5025231233 |
+| Kayana Danendra Kawiswara     | 5025231286 |
 
 ![OrtoGraph](./img/20261012_090936.png)
 
