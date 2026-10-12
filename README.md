@@ -1,6 +1,20 @@
-# SPARQL Queries
+# Company Onthology using Protégé
 
-## Simple 1: employees who work in IT
+| Team         |
+| ------------ |
+| Air Es Bepek |
+
+| NRP        |
+| ---------- |
+| 5025221238 |
+| 5025231233 |
+| 5025231286 |
+
+![OrtoGraph](./img/20261012_090936.png)
+
+## SPARQL Queries
+
+### Simple 1: employees who work in IT
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -13,7 +27,7 @@ WHERE {
 }
 ```
 
-## Simple 2: active projects and their budget
+### Simple 2: active projects and their budget
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -27,7 +41,7 @@ WHERE {
 }
 ```
 
-## Complex 1 (UNION + ORDER BY): all managers and interns
+### Complex 1 (UNION + ORDER BY): all managers and interns
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -44,7 +58,7 @@ WHERE {
 ORDER BY ?name
 ```
 
-## Complex 2 (OPTIONAL): every project with its owning department (if any)
+### Complex 2 (OPTIONAL): every project with its owning department (if any)
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -60,7 +74,7 @@ WHERE {
 ORDER BY ?project
 ```
 
-## Complex 3 (JOIN + FILTER): employees hired after 2021 with a skill, working on an active project
+### Complex 3 (JOIN + FILTER): employees hired after 2021 with a skill, working on an active project
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -79,7 +93,7 @@ WHERE {
 ORDER BY ?hired
 ```
 
-## Complex 4 (GROUP BY + COUNT + HAVING): headcount and average salary per department
+### Complex 4 (GROUP BY + COUNT + HAVING): headcount and average salary per department
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -96,7 +110,7 @@ HAVING (COUNT(?e) >= 2)
 ORDER BY DESC(?headcount)
 ```
 
-## Extra (property path, works without a reasoner): everyone who reports up to Rina, directly or not
+### Extra (property path, works without a reasoner): everyone who reports up to Rina, directly or not
 
 ```sparql
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
