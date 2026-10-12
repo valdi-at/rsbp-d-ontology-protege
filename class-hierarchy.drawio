@@ -1,0 +1,74 @@
+<mxfile host="app.diagrams.net" agent="claude-code">
+  <diagram name="Class Hierarchy" id="classHierarchy">
+    <mxGraphModel dx="1370" dy="740" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="person" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Person" vertex="1">
+          <mxGeometry height="40" width="160" x="440" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="employee" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Employee" vertex="1">
+          <mxGeometry height="40" width="160" x="440" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="manager" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Manager" vertex="1">
+          <mxGeometry height="40" width="160" x="280" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="intern" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1" value="Intern" vertex="1">
+          <mxGeometry height="40" width="160" x="600" y="360" as="geometry" />
+        </mxCell>
+        <mxCell id="department" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Department" vertex="1">
+          <mxGeometry height="40" width="160" x="640" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="office" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Office" vertex="1">
+          <mxGeometry height="40" width="160" x="640" y="140" as="geometry" />
+        </mxCell>
+        <mxCell id="project" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Project" vertex="1">
+          <mxGeometry height="40" width="160" x="640" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="skill" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1" value="Skill" vertex="1">
+          <mxGeometry height="40" width="160" x="640" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="projectmember" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" value="ProjectMember" vertex="1">
+          <mxGeometry height="40" width="160" x="80" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="note_employee" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;size=14" value="worksIn some Department" vertex="1">
+          <mxGeometry height="40" width="200" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="note_manager" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;size=14" value="manages some Employee" vertex="1">
+          <mxGeometry height="40" width="200" x="50" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="note_projectmember" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;size=14" value="Person ⊓ (assignedTo some Project)" vertex="1">
+          <mxGeometry height="40" width="240" x="40" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="e_emp_person" edge="1" parent="1" source="employee" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;entryX=0.5;entryY=1;" target="person">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mgr_emp" edge="1" parent="1" source="manager" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;entryX=0.25;entryY=1;" target="employee">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_int_emp" edge="1" parent="1" source="intern" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;endFill=0;endSize=14;exitX=0.5;exitY=0;entryX=0.75;entryY=1;" target="employee">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pm_person" edge="1" parent="1" source="projectmember" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=open;endFill=0;dashed=1;fontColor=#d79b00;" target="person" value="equivalentClass">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_mgr_int" edge="1" parent="1" source="manager" style="html=1;endArrow=none;startArrow=none;dashed=1;dashPattern=4 4;strokeColor=#FF0000;fontColor=#FF0000;" target="intern" value="disjointWith">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_note_emp" edge="1" parent="1" source="note_employee" style="html=1;endArrow=none;startArrow=none;dashed=1;strokeColor=#d6b656;" target="employee">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_note_mgr" edge="1" parent="1" source="note_manager" style="html=1;endArrow=none;startArrow=none;dashed=1;strokeColor=#d6b656;edgeStyle=orthogonalEdgeStyle;" target="manager">
+          <mxGeometry relative="1" x="0.053" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_note_pm" edge="1" parent="1" source="note_projectmember" style="html=1;endArrow=none;startArrow=none;dashed=1;strokeColor=#d6b656;" target="projectmember">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

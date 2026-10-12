@@ -14,6 +14,8 @@
 
 ## Ontology Structure
 
+![OrtoGraph](./img/class-hierarchy.drawio.png)
+
 ### Classes
 
 | Class           | Parent / Definition                                                    |
