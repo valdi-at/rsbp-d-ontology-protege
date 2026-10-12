@@ -7,6 +7,101 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company"/>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Department -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Department"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Intern -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Intern">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Manager">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Employee"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Office -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Office"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Project -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Project"/>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#ProjectMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#ProjectMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Skill -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Skill"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Department"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Office"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Person"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Project"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/shinyshoe/ontologies/2026/9/company#Skill"/>
+        </owl:members>
+    </rdf:Description>
 </rdf:RDF>
 
 
